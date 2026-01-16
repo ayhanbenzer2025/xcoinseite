@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "prisma generate && next build",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start",
+    "postinstall": "prisma generate",
     "optimize": "bash scripts/optimize-all.sh",
     "optimize:videos": "bash scripts/optimize-videos-aggressive.sh",
     "optimize:images": "bash scripts/optimize-images.sh",
